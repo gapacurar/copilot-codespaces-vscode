@@ -58,8 +58,8 @@ class Car:
 
 if __name__ == "__main__":
     # Create two Car objects
-    car1 = Car("Toyota", "Red", 180)
-    car2 = Car("Honda", "Blue", 200)
+    car1 = Car("Toyota", "Red", 150)
+    car2 = Car("Honda", "Blue", 180)
 
     # Display their attributes
     print("Car 1:", car1)
