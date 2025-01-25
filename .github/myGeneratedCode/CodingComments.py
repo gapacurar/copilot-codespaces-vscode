@@ -56,11 +56,37 @@ class Car:
         """
         return self.max_speed
 
-if __name__ == "__main__":
-    # Create two Car objects
-    car1 = Car("Toyota", "Red", 150)
-    car2 = Car("Honda", "Blue", 180)
+def bubble_sort_cars(cars):
+    n = len(cars)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if cars[j].get_max_speed() > cars[j+1].get_max_speed():
+                cars[j], cars[j+1] = cars[j+1], cars[j]
 
-    # Display their attributes
-    print("Car 1:", car1)
-    print("Car 2:", car2)
+if __name__ == "__main__":
+    # Create 10 Car objects
+    cars = [
+        Car("Toyota", "Red", 180),
+        Car("Honda", "Blue", 200),
+        Car("Ford", "Green", 160),
+        Car("Chevrolet", "Yellow", 190),
+        Car("BMW", "Black", 220),
+        Car("Audi", "White", 210),
+        Car("Mercedes", "Silver", 230),
+        Car("Volkswagen", "Purple", 170),
+        Car("Nissan", "Orange", 150),
+        Car("Hyundai", "Pink", 140)
+    ]
+
+    # Display original list of cars
+    print("Original list of cars:")
+    for car in cars:
+        print(car)
+
+    # Sort the cars based on their maximum speed using bubble sort
+    bubble_sort_cars(cars)
+
+    # Display sorted list of cars
+    print("\nSorted list of cars by max speed:")
+    for car in cars:
+        print(car)
