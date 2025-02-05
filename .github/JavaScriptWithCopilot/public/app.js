@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Fetch and display products
     function fetchProducts() {
-        fetch('/products')
+        fetch('http://localhost:3000/products') // Ensure this points to your Express.js server
             .then(response => response.json())
             .then(products => {
                 productList.innerHTML = '';
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const name = productNameInput.value;
         const price = productPriceInput.value;
 
-        fetch('/products', {
+        fetch('http://localhost:3000/products', { // Ensure this points to your Express.js server
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Delete product
     window.deleteProduct = function(id) {
-        fetch(`/products/${id}`, {
+        fetch(`http://localhost:3000/products/${id}`, { // Ensure this points to your Express.js server
             method: 'DELETE'
         })
         .then(response => response.json())

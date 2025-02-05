@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/gapacurar/copilot-codespaces-vscode/issues"
   },
-  "homepage": "https://github.com/gapacurar/copilot-codespaces-vscode#readme"
+  "homepage": "https://github.com/gapacurar/copilot-codespaces-vscode#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
 }
